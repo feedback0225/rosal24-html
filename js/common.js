@@ -11,6 +11,7 @@ function updateWidth() {
   fixedElement.style.padding = `0 ${parentRect.left - 80}px 0 ${parentRect.left - 80}px`;
   
   if (fixedElement2) {
+    document.addEventListener('DOMContentLoaded', function() {
     const parentElement2 = fixedElement2.parentElement;
     const parentRect2 = parentElement2.getBoundingClientRect();
     const navBlock = parentElement2.querySelector('.list-nav-category');
@@ -20,6 +21,7 @@ function updateWidth() {
     navBlock.style.width = `${window.innerWidth * 0.2}px`;
     navBlock.style.transform = `translateX(${parentRect2.left + parentRect2.width}px)`;
     navPanelBlock.style.width = `${parentRect2.left + parentRect2.width}px`;
+  });
   } else if (fixedElement3) {
     fixedElement.style.padding = `0 ${parentRect.left}px 0 ${parentRect.left}px`;
     const parentElement3 = fixedElement3.parentElement;
@@ -85,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     _document$querySelect2,
     _document$querySelect3,
     _document$querySelect4,
+    _document$querySelect5,
     _document,
     _document43,
     _document$querySelect30,
@@ -142,6 +145,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // close search mobile
   (_document$querySelect4 = document.querySelector(".js-search-close")) === null || _document$querySelect4 === void 0 || _document$querySelect4.addEventListener("click", function () {
+    document.querySelector(".header__search").classList.remove("header__search--active");
+    document.querySelector("body").classList.remove("body-fixed");
+  });
+
+  (_document$querySelect5 = document.querySelector(".header__search")) === null || _document$querySelect5 === void 0 || _document$querySelect5.addEventListener("click", function () {
     document.querySelector(".header__search").classList.remove("header__search--active");
     document.querySelector("body").classList.remove("body-fixed");
   });
