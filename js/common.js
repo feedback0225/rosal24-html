@@ -596,16 +596,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const cardTabSelect = document.querySelector('.main--card .basket-delivery__link')
 
 
-  if(cardTab){
-    cardTabSelect.addEventListener('click', () => {
-      cardTab.forEach((item, i) => {
-        item.classList.remove('card-tabs-content__box--active')
-        cardTabContent[i].classList.remove('card-tabs-nav__item--active')
+
+  document.addEventListener('DOMContentLoaded', function() {
+    if(cardTab){
+      cardTabSelect.addEventListener('click', () => {
+        cardTab.forEach((item, i) => {
+          item.classList.remove('card-tabs-content__box--active')
+          cardTabContent[i].classList.remove('card-tabs-nav__item--active')
+        })
+        cardTab[3].classList.add('card-tabs-content__box--active')
+        cardTabContent[3].classList.add('card-tabs-nav__item--active')
       })
-      cardTab[3].classList.add('card-tabs-content__box--active')
-      cardTabContent[3].classList.add('card-tabs-nav__item--active')
-    })
-  }
+    }
+  })
 
 
 });
@@ -672,10 +675,13 @@ function deactivateSubMenu() {
   });
 }
 
+
 function closeSubMenu() {
   deactivateSubMenu();
-  let menu = document.querySelector('.list-nav-category');
-  let burgerBtn = document.querySelector('.wrapper__nav .button-menu');
-  burgerBtn.classList.toggle("button-menu--active");
-  menu.classList.toggle("list-nav-category--active");
-}
+  document.addEventListener('DOMContentLoaded', function() {
+    let menu = document.querySelector('.list-nav-category');
+    let burgerBtn = document.querySelector('.wrapper__nav .button-menu');
+    burgerBtn.classList.toggle("button-menu--active");
+    menu.classList.toggle("list-nav-category--active");
+  })
+  }

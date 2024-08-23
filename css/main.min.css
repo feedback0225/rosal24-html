@@ -1887,7 +1887,7 @@ input.__error {
 }
 .menu-mobile__body .list-nav-category {
     padding-bottom: 100px;
-    width: 100%;
+    width: 100% !important;
     height: inherit;
     overflow-y: scroll;
     gap: 0;
