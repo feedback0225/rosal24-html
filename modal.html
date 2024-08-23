@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <title>Modals</title><!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE = edge"><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/main.min.css"><!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script><![endif]-->
+    <link rel="apple-touch-icon" sizes="180x180" href="favico/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicofavicon-16x16.png">
+    <link rel="manifest" href="favico/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      nav {
+        margin: 10% 0 0 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    </style>
+  </head>
+  <body>
+    <nav><a href="#modal-authorization" data-fancybox="modal-authorization">Авторизация</a><a href="#modal-age" data-fancybox="modal-age">Возраст</a><a href="#modal-city" data-fancybox="modal-city">Город</a><a href="#modal-code" data-fancybox="modal-code">Код</a><a href="#modal-review" data-fancybox="modal-review">Отзыв</a><a href="#modal-question" data-fancybox="modal-question">Вопрос</a></nav>
+    <!-- authorization-->
+    <div class="modal modal--authorization" id="modal-authorization">
+      <div class="modal__header">Вход или регистрация</div>
+      <div class="modal__text">Вам поступит смс или звонок на указанный номер телефона. </div>
+      <!-- form-->
+      <form class="form form--column form--modal modal__form" action="#">
+        <div class="form__item __req">
+          <div class="form__item-head">Телефон </div>
+          <input class="form__input js-form-phone __phone" type="text" name="phone" placeholder="+7 (___) ___-__-__"/>
+        </div>
+        <button class="form__button" type="submit">
+          <div class="form__button-text">Отправить код</div>
+          <div class="form__button-icon"> 
+            <svg class="icon icon-arrow-button">
+              <use xlink:href="svg/symbols.svg#icon-arrow-button"></use>
+            </svg>
+          </div>
+        </button>
+      </form>
+    </div>
+    <!-- where-order-->
+    <div class="modal modal--age" id="modal-age">
+      <div class="modal__important">18+</div>
+      <div class="modal__body"> 
+        <div class="modal__header">Вам есть 18 лет?</div>
+        <div class="modal__text">Сайт содержит информацию, которая не рекомендована лицам, не достигшим совершеннолетия. Для входа на сайт, подтвердите свой возраст.</div>
+        <div class="modal__actions">
+          <button class="link-button is-close " tabindex='0' title='Close' href="#">Да, мне есть 18 лет</button><a class="modal__actions-no" href="#">Нет, я младше </a></div>
+        <div class="modal__info">Для вашего удобства сайт работает с файлами cookie - заходя на данный ресурс, вы соглашаетесь на их использование.</div>
+      </div>
+    </div>
+    <!-- modal-city-->
+    <div class="modal modal--city" id="modal-city">
+      <div class="modal__header">Выберите ваш город </div>
+      <div class="modal__search"> 
+        <form class="form-search form-search--modal" action="">
+          <input class="form-search__input __req" type="search" name="search" placeholder="Поиск по каталогу..."/>
+          <button class="form-search__submit">
+            <svg class="icon icon-search">
+              <use xlink:href="svg/symbols.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <div class="modal__list-city">
+        <div class="block-city scroller">
+          <div class="block-city__column">
+            <div class="block-city__item">
+              <div class="block-city__item-head">Санкт-Петербург и область</div>
+              <div class="list-city"><a class="list-city__name" href="#">Санкт-Петербург</a><a class="list-city__name" href="#">Волосово</a><a class="list-city__name" href="#">Волхов</a><a class="list-city__name" href="#">Волховстрой</a><a class="list-city__name" href="#">Выборг</a><a class="list-city__name" href="#">Высоцк</a><a class="list-city__name" href="#">Уурас</a><a class="list-city__name" href="#">Гатчина</a><a class="list-city__name" href="#">Красногвардейск</a></div>
+            </div>
+            <div class="block-city__item">
+              <div class="block-city__item-head">Архангельская область</div>
+              <div class="list-city"><a class="list-city__name" href="#">Архангельск</a><a class="list-city__name" href="#">Волховстрой</a><a class="list-city__name" href="#">Десеновское</a><a class="list-city__name" href="#">Ерино </a><a class="list-city__name" href="#">Зеленоград</a></div>
+            </div>
+          </div>
+          <div class="block-city__column">
+            <div class="block-city__item">
+              <div class="block-city__item-head">Москва и область</div>
+              <div class="list-city"><a class="list-city__name" href="#">Москва</a><a class="list-city__name" href="#">Внуковское</a><a class="list-city__name" href="#">Десеновское</a><a class="list-city__name" href="#">Ерино </a><a class="list-city__name" href="#">Зеленоград</a><a class="list-city__name" href="#">Киевский</a><a class="list-city__name" href="#">Кокошкино</a><a class="list-city__name" href="#">Марьино </a></div>
+            </div>
+            <div class="block-city__item">
+              <div class="block-city__item-head">Белгородская область</div>
+              <div class="list-city"><a class="list-city__name" href="#">Белгород</a><a class="list-city__name" href="#">Десеновское</a><a class="list-city__name" href="#">Ерино </a><a class="list-city__name" href="#">Зеленоград</a></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal-code-->
+    <div class="modal modal--code" id="modal-code">
+      <div class="modal__header">Введите код</div>
+      <div class="modal__text">Для входа введите код из смс-сообщения</div>
+      <div class="modal__code">
+        <div class="pin-code">
+          <input class="pin-code__input" type="number" maxlength="1" autofocus="autofocus"/>
+          <input class="pin-code__input" type="number" maxlength="1"/>
+          <input class="pin-code__input" type="number" maxlength="1"/>
+          <input class="pin-code__input" type="number" maxlength="1"/>
+        </div>
+      </div>
+      <div class="modal__phone">
+        <div class="modal__phone-number">+7 (900) 420-56-89</div><a class="modal__phone-change" href="#">Изменить</a>
+      </div>
+      <div class="modal__request-code">
+        <button class="request-code" type="button">Запросить повторно через 2:12</button>
+      </div>
+    </div>
+    <!-- modal-review-->
+    <div class="modal modal--review" id="modal-review">
+      <div class="modal__header">Ваш отзыв о товаре</div>
+      <form class="form form--review modal__form" action="#">
+        <div class="form__box">
+          <div class="form__box-name">Оцените товар:</div>
+          <div class="form__box-frame">
+            <div class="review-raiting">
+              <span class="review-raiting__item __active" data-value="1"> 
+                <svg class="icon icon-rating-star">
+                  <use xlink:href="svg/symbols.svg#icon-rating-star"></use>
+                </svg>
+              </span>
+              <span class="review-raiting__item __active" data-value="2"> 
+                <svg class="icon icon-rating-star">
+                  <use xlink:href="svg/symbols.svg#icon-rating-star"></use>
+                </svg>
+              </span>
+              <span class="review-raiting__item __active" data-value="3"> 
+                <svg class="icon icon-rating-star">
+                  <use xlink:href="svg/symbols.svg#icon-rating-star"></use>
+                </svg>
+              </span>
+              <span class="review-raiting__item __active" data-value="4"> 
+                <svg class="icon icon-rating-star">
+                  <use xlink:href="svg/symbols.svg#icon-rating-star"></use>
+                </svg>
+              </span>
+              <span class="review-raiting__item __active" data-value="5"> 
+                <svg class="icon icon-rating-star">
+                  <use xlink:href="svg/symbols.svg#icon-rating-star"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+          <input type="hidden" name="rating" id="rating" value="5" required>
+        </div>
+        <div class="form__box">
+          <div class="form__box-name">Преимущества:</div>
+          <div class="form__box-frame">
+            <textarea class="form__textarea" name="advantages" placeholder="Что вам понравилось"></textarea>
+          </div>
+        </div>
+        <div class="form__box">
+          <div class="form__box-name">Недостатки:</div>
+          <div class="form__box-frame">
+            <textarea class="form__textarea" name="flaws" placeholder="Что вас не устроило"></textarea>
+          </div>
+        </div>
+        <div class="form__box">
+          <div class="form__box-name">Комментарий:</div>
+          <div class="form__box-frame">
+            <textarea class="form__textarea" name="comment" placeholder="Другие впечатления о товаре"></textarea>
+          </div>
+        </div>
+        <input class="form__submit" type="submit" value="Оставить отзыв"/>
+      </form>
+    </div>
+    <!-- modal-question-->
+    <div class="modal modal--question" id="modal-question">
+      <div class="modal__header">Задать вопрос</div>
+      <form class="form form--question modal__form" action="#">
+        <div class="form__item __req">
+          <div class="form__item-head">Ваш вопрос</div>
+          <textarea class="form__textarea" name="question" placeholder="Что вас интересует?"></textarea>
+        </div>
+        <input class="form__submit" type="submit" value="Задать вопрос"/>
+      </form>
+    </div>
+    <!-- scripts-->
+    <script src="js/vendor.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/validation.js"></script>
+  </body>
+</html>
