@@ -141,15 +141,18 @@ document.addEventListener("DOMContentLoaded", function () {
   (_document$querySelect3 = document.querySelector(".js-search-mobile")) === null || _document$querySelect3 === void 0 || _document$querySelect3.addEventListener("click", function () {
     document.querySelector(".header__search").classList.add("header__search--active");
     document.querySelector("body").classList.add("body-fixed");
+    document.querySelector(".header__blur").classList.add("header__blur--active");
   });
 
   // close search mobile
   (_document$querySelect4 = document.querySelector(".js-search-close")) === null || _document$querySelect4 === void 0 || _document$querySelect4.addEventListener("click", function () {
     document.querySelector(".header__search").classList.remove("header__search--active");
     document.querySelector("body").classList.remove("body-fixed");
+    document.querySelector(".header__blur").classList.remove("header__blur--active");
   });
 
-  (_document$querySelect5 = document.querySelector(".header__search")) === null || _document$querySelect5 === void 0 || _document$querySelect5.addEventListener("click", function () {
+  (_document$querySelect5 = document.querySelector(".header__blur")) === null || _document$querySelect5 === void 0 || _document$querySelect5.addEventListener("click", function () {
+    document.querySelector(".header__blur").classList.remove("header__blur--active");
     document.querySelector(".header__search").classList.remove("header__search--active");
     document.querySelector("body").classList.remove("body-fixed");
   });

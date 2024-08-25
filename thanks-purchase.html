@@ -2540,6 +2540,7 @@
                   <use xlink:href="svg/symbols.svg#icon-close-search"></use>
                 </svg>
               </div>
+              <div class="header__blur"></div>
             </div>
             <!-- mobile-->
             <div class="header__search-mobile">
@@ -2550,27 +2551,29 @@
               </div>
             </div>
             <!-- authorization-->
-            <div class="header__authorization"><a class="link-user-authorization" href="#modal-authorization" data-fancybox="authorization"><span class="link-user-authorization__icon">
-                  <svg class="icon icon-user">
-                    <use xlink:href="svg/symbols.svg#icon-user"></use>
-                  </svg></span><span class="link-user-authorization__text">Личный кабинет</span></a></div>
-            <!-- favorites-->
-            <div class="header__favorites"><a class="link-favorites" href="#"><span class="link-favorites__icon">
-                  <svg class="icon icon-favorites">
-                    <use xlink:href="svg/symbols.svg#icon-favorites"></use>
-                  </svg></span><span class="link-favorites__text">Избранное</span></a></div>
-            <!-- basket-->
-            <div class="header__basket"><a class="header-basket js-basket-actions" href="#">
-                <div class="header-basket__frame">
-                  <svg class="icon icon-basket">
-                    <use xlink:href="svg/symbols.svg#icon-basket"></use>
-                  </svg>
-                  <div class="header-basket__quantity">12</div>
+              <div class="header__authorization"><a class="link-user-authorization" href="#modal-authorization" data-fancybox="authorization"><span class="link-user-authorization__icon">
+                    <svg class="icon icon-user">
+                      <use xlink:href="svg/symbols.svg#icon-user"></use>
+                    </svg></span><span class="link-user-authorization__text">Личный кабинет</span></a></div>
+              <!-- favorites-->
+              <div class="header__favorites"><a class="link-favorites" href="#"><span class="link-favorites__icon">
+                    <svg class="icon icon-favorites">
+                      <use xlink:href="svg/symbols.svg#icon-favorites"></use>
+                    </svg></span><span class="link-favorites__text">Избранное</span></a></div>
+              <!-- basket-->
+              <div class="header__basket">
+                <a class="header-basket js-basket-actions" href="#">
+                  <div class="header-basket__frame">
+                    <svg class="icon icon-basket">
+                      <use xlink:href="svg/symbols.svg#icon-basket"></use>
+                    </svg>
+                    <div class="header-basket__quantity">12</div>
+                  </div>
+                  <div class="header-basket__data">
+                    <div class="header-basket__data-head">Сумма:</div>
+                    <div class="header-basket__value"> 1 899.99 ₽</div>
+                  </div></a>
                 </div>
-                <div class="header-basket__data">
-                  <div class="header-basket__data-head">Сумма:</div>
-                  <div class="header-basket__value"> 1 899.99 ₽</div>
-                </div></a></div>
           </div>
         </header>
         <!-- main-->
@@ -2578,12 +2581,12 @@
           <!-- content-->
           <div class="content main__content-full">
             <div class="thanks-purchase">
-              <div class="your-order">
-                <div class="your-order__number">Ваш заказ #131346526</div>
-                <div class="your-order__content">Вы можете отслеживать статус вашего заказа в личном кабинете</div>
-              </div>
               <div class="thanks-purchase__box"> 
                 <div class="thanks-purchase__header">Спасибо <br> за покупку!</div>
+                <div class="your-order">
+                  <div class="your-order__number">Ваш заказ #131346526</div>
+                  <div class="your-order__content">Вы можете отслеживать статус вашего заказа в личном кабинете</div>
+                </div>
                 <div class="order-info thanks-purchase__info">
                   <div class="order-info__item">
                     <div class="order-info__name">Начислено балов:</div>
@@ -2602,6 +2605,9 @@
                     <div class="order-info__value">Горьковская, г. Санкт-Петербург, пр-кт Заневский, 42/1</div>
                   </div><a class="link-button link-button--continue order-info__link" href="#">Продожить покупки </a>
                 </div>
+              </div>
+              <div class="thanks-purchase_image">
+                <img src="img/thx-img.svg" alt="thx-img">
               </div>
             </div>
           </div>
