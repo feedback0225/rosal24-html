@@ -1,27 +1,24 @@
 "use strict";
-
 function updateWidth() {
   const fixedElement = document.querySelector('header.header .container');
   const fixedElement2 = document.querySelector('.wrapper__nav .button-menu');
   const fixedElement3 = document.querySelector('.main__aside--home');
   const parentElement = fixedElement.parentElement;
-  const parentRect = parentElement.getBoundingClientRect();
-
   // fixedElement.style.width = `${parentRect.width}px`;
+  const parentRect = parentElement.getBoundingClientRect();
   fixedElement.style.padding = `0 ${parentRect.left - 80}px 0 ${parentRect.left - 80}px`;
-  
   if (fixedElement2) {
-    document.addEventListener('DOMContentLoaded', function() {
     const parentElement2 = fixedElement2.parentElement;
     const parentRect2 = parentElement2.getBoundingClientRect();
     const navBlock = parentElement2.querySelector('.list-nav-category');
     const navPanelBlock = parentElement2.querySelector('.nav_panel_block');
     fixedElement2.style.width = `${parentRect2.width}px`;
     fixedElement2.style.left = `${parentRect2.left}px`;
-    navBlock.style.width = `${window.innerWidth * 0.2}px`;
-    navBlock.style.transform = `translateX(${parentRect2.left + parentRect2.width}px)`;
-    navPanelBlock.style.width = `${parentRect2.left + parentRect2.width}px`;
-  });
+    if (navBlock !== null) {
+      navBlock.style.width = `${window.innerWidth * 0.2}px`;
+      navBlock.style.transform = `translateX(${parentRect2.left + parentRect2.width}px)`;
+    }
+    navPanelBlock.style.width = `${parentRect2.left + parentRect2.width}px`;;
   } else if (fixedElement3) {
     fixedElement.style.padding = `0 ${parentRect.left}px 0 ${parentRect.left}px`;
     const parentElement3 = fixedElement3.parentElement;
@@ -59,7 +56,7 @@ function updateHeight() {
       const mobileEl2 = document.querySelector('.menu-mobile__actions');
       const mobileEl1Rect = mobileEl1.getBoundingClientRect();
       const mobileEl2Rect = mobileEl2.getBoundingClientRect();
-      el.style.height = `calc(100vh - ${headerRect.height}px - ${mobileEl1Rect.height}px - ${mobileEl2Rect.height}px - 58px)`;
+      // el.style.height = `calc(100vh - ${headerRect.height}px - ${mobileEl1Rect.height}px - ${mobileEl2Rect.height}px - 58px)`;
     } else if (el.classList.contains('header__logo')) {
       // el.style.height = `${headerRect.height}px`;
       // console.log(`${headerRect.height > 80 ? 64.8 : headerRect.height}px`);
@@ -79,6 +76,8 @@ window.addEventListener('scroll', function() {
   updateHeight();
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
   updateWidth();
   updateHeight();
@@ -94,11 +93,15 @@ document.addEventListener("DOMContentLoaded", function () {
     _document$querySelect31,
     _document$querySelect32,
     _document$querySelect33,
+    _document$querySelect34,
+    _document$querySelect35,
+    _document$querySelect36,
     _document44,
     _document46,
     _document47,
     _document48,
     _document49,
+    _document50,
     _document$querySelect34;
   // input mask
   document.querySelectorAll(".js-form-phone").forEach(function (e) {
@@ -299,6 +302,9 @@ document.addEventListener("DOMContentLoaded", function () {
         mainBody === null || mainBody === void 0 || mainBody.prepend(menuMobileSubMenu);
       }
     }
+    window.onload = function () {
+      handleTabletChange
+    };
     // Слушать события
     mediaQuery.addListener(handleTabletChange);
 
@@ -367,6 +373,9 @@ document.addEventListener("DOMContentLoaded", function () {
         mainAsideContentBasket === null || mainAsideContentBasket === void 0 || mainAsideContentBasket.append(basketCardContent);
       }
     }
+    window.onload = function () {
+        handleTabletChange
+    };
     // Слушать события
     mediaQuery.addListener(handleTabletChange);
 
@@ -416,6 +425,9 @@ document.addEventListener("DOMContentLoaded", function () {
         _tabNavBody_5 === null || _tabNavBody_5 === void 0 || _tabNavBody_5.append(_tabContent_4);
       }
     }
+    window.onload = function () {
+      handleTabletChange
+    };
     // Слушать события
     mediaQuery.addListener(handleTabletChange);
 
@@ -425,7 +437,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // menu mobile
   var buttonMenu = document.querySelector(".js-mobile-button");
-  var blockMenu = document.querySelector(".menu-mobile");
+  let buttonDMenu = document.querySelector(".js_menu")
+  var blockMenu = document.querySelector(".menu-mobile")
+  var body = document.querySelector("body")
   var buttonMenuClose = document.querySelector(".js-menu-close");
   var openMenu = function openMenu() {
     blockMenu.classList.add("menu-mobile--active");
@@ -439,6 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
     this.nextElementSibling.classList.remove("mobile-button--close");
     document.querySelector("body").classList.add("body-fixed");
   });
+
   buttonMenuClose === null || buttonMenuClose === void 0 || buttonMenuClose.addEventListener("click", function () {
     closeMenu();
     this.classList.add("mobile-button--close");
@@ -460,6 +475,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // filter close
   (_document$querySelect31 = document.querySelector(".js-close-panel-filter")) === null || _document$querySelect31 === void 0 || _document$querySelect31.addEventListener("click", function () {
+    document.querySelector(".panel-filter").classList.remove("panel-filter--active");
+  });
+
+  (_document$querySelect34 = document.querySelector(".filter_btn")) === null || _document$querySelect34 === void 0 || _document$querySelect34.addEventListener("click", function () {
     document.querySelector(".panel-filter").classList.remove("panel-filter--active");
   });
 
@@ -523,6 +542,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".wrapper-panel-shops").classList.remove("wrapper-panel-shops--active");
   });
 
+  (_document$querySelect35 = document.querySelector(".panel_close")) === null || _document$querySelect35 === void 0 || _document$querySelect35.addEventListener("click", function () {
+    document.querySelector(".wrapper-panel-shops").classList.remove("wrapper-panel-shops--active");
+  });
+
+  (_document$querySelect36 = document.querySelector(".js_open_panel_shops")) === null || _document$querySelect36 === void 0 || _document$querySelect36.addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".wrapper-panel-shops").classList.add("wrapper-panel-shops--active");
+  });
+
   // basket panel
   (_document44 = document) === null || _document44 === void 0 || (_document44 = _document44.querySelector(".js-basket-actions")) === null || _document44 === void 0 || _document44.addEventListener("click", function (e) {
     var _document45;
@@ -533,6 +561,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // close basket panel
   (_document46 = document) === null || _document46 === void 0 || (_document46 = _document46.querySelector(".js-close-panel-basket")) === null || _document46 === void 0 || _document46.addEventListener("click", function () {
+    document.querySelector(".wrapper-panel-basket").classList.remove("wrapper-panel-basket--active");
+    document.querySelector("body").classList.remove("body-fixed");
+  });
+
+  (_document50 = document) === null || _document50 === void 0 || (_document50 = _document50.querySelector(".panel_close")) === null || _document50 === void 0 || _document50.addEventListener("click", function () {
     document.querySelector(".wrapper-panel-basket").classList.remove("wrapper-panel-basket--active");
     document.querySelector("body").classList.remove("body-fixed");
   });
@@ -571,7 +604,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // tabs change mobile
-  var tabsChangeButton = (_document49 = document) === null || _document49 === void 0 ? void 0 : _document49.querySelectorAll(".js-tabs-nav-mobile");
+  var tabsChangeButton = (_document49 = document) === null || _document49 === void 0 ? void 0 : _document49.querySelectorAll(".card-tabs-nav__head");
   tabsChangeButton === null || tabsChangeButton === void 0 || tabsChangeButton.forEach(function (button) {
     button.addEventListener("click", function () {
       this.classList.toggle("card-tabs-nav__change--active");
@@ -685,14 +718,67 @@ function deactivateSubMenu() {
     el.classList.remove("wrapper-sub-menu__box--active");
   });
 }
-
+const black_blur = document.querySelector(".black_blur")
+const modal_age_small = document.querySelector(".modal--age_small")
+const modal_age = document.querySelector(".modal--age")
+const body = document.querySelector("body")
 
 function closeSubMenu() {
   deactivateSubMenu();
-  document.addEventListener('DOMContentLoaded', function() {
     let menu = document.querySelector('.list-nav-category');
-    let burgerBtn = document.querySelector('.wrapper__nav .button-menu');
+    let burgerBtn = document.querySelector('.button-menu');
     burgerBtn.classList.toggle("button-menu--active");
     menu.classList.toggle("list-nav-category--active");
+}
+
+function openOld(){
+  modal_age.style.display = "block"
+  black_blur.classList.add("black_blur_vis")
+  body.style.overflow = "hidden"
+}
+
+function closeOld(){
+  modal_age.style.display = "none"
+  black_blur.classList.remove("black_blur_vis")
+  body.style.overflow = "visible"
+}
+
+function openSmall(){
+  modal_age.style.display = "none"
+  modal_age_small.style.display = "block"
+  body.style.overflow = "hidden"
+}
+
+
+  // document.addEventListener("click", function () {
+  //   const element = document.querySelector('.carousel__button');
+  //   if (element) {
+  //     const beforeStyles = window.getComputedStyle(element, '::before');
+  //     const content = beforeStyles.getPropertyValue('content').replace(/["']/g, "") == "none" ? "":beforeStyles.getPropertyValue('content').replace(/["']/g, ""); // Удаляем кавычки
+  //     const contentElement = document.createElement('div');
+  //     contentElement.classList.add("contentElement")
+  //     contentElement.textContent = content;
+  //     const body = document.querySelector("body")
+  //     element.appendChild(contentElement);
+  //       // Например, получаем значение свойства content
+  //       contentElement.addEventListener("click", function (){
+  //         black_blur.classList.add("black_blur_vis")
+  //         body.style.overflow = "hidden"
+  //         modal_age_small.classList.add("modal_age_small")
+  //       })
+  //   } 
+  // })
+
+  window.addEventListener('scroll', function() {
+    let main__aside = document.querySelector(".main__aside")
+    let main__aside_content = document.querySelector(".main__aside-content")
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (main__aside !== null) {
+      main__aside.style.top = scrollTop >= 640? "143px" : "143px"
+    }
+    if (main__aside_content) {
+      main__aside_content.style.top = scrollTop >= 95? "80px" : "63px"
+    }
   })
-  }
+
+  

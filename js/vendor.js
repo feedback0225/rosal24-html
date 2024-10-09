@@ -2082,6 +2082,7 @@
                     "prev" === t.id && e.setAttribute("data-fancybox-prev", ""),
                     "next" === t.id && e.setAttribute("data-fancybox-next", "");
                 const s = e.querySelector("svg");
+
                 return s && (s.setAttribute("role", "img"), s.setAttribute("tabindex", "-1"), s.setAttribute("xmlns", "http://www.w3.org/2000/svg")), e;
             }
             build() {
@@ -4598,6 +4599,7 @@
                 },
             },
             Tt = {};
+
         class At {
             constructor(...t) {
                 let e, s;
@@ -7330,5 +7332,7 @@
             ge.on("transitionStart", function () {
                 me.slideTo(ge.activeIndex);
             });
+
+
     },
 ]);

@@ -11,25 +11,25 @@ document.addEventListener('DOMContentLoaded', function() {
     updateHighlight();
 });
 
-document.querySelectorAll('.list-brand__checkbox').forEach(filterElement => {
-    filterElement.addEventListener('click', (event) => {
-        event.preventDefault();
-        const filterType = event.target.dataset.filterType;
-        const filterValue = event.target.name;
+// document.querySelectorAll('.list-brand__checkbox').forEach(filterElement => {
+//     filterElement.addEventListener('click', (event) => {
+//         event.preventDefault();
+//         const filterType = event.target.dataset.filterType;
+//         const filterValue = event.target.name;
 
-        if (selectedFilters[filterType].has(filterValue)) {
-            selectedFilters[filterType].delete(filterValue);
-            event.target.classList.remove('__active');
-            removeTag(filterType, filterValue);
-        } else {
-            selectedFilters[filterType].add(filterValue);
-            event.target.classList.add('__active');
-            addTag(filterType, filterValue);
-        }
+//         if (selectedFilters[filterType].has(filterValue)) {
+//             selectedFilters[filterType].delete(filterValue);
+//             event.target.classList.remove('__active');
+//             removeTag(filterType, filterValue);
+//         } else {
+//             selectedFilters[filterType].add(filterValue);
+//             event.target.classList.add('__active');
+//             addTag(filterType, filterValue);
+//         }
 
-        filterProducts();
-    });
-});
+//         filterProducts();
+//     });
+// });
 document.querySelectorAll('.list-category-data__name').forEach(categoryLink => {
     categoryLink.addEventListener('click', (event) => {
         event.preventDefault();
@@ -110,9 +110,9 @@ document.querySelector('.link-reset').addEventListener('click', (event) => {
     updateHighlight();
 
     document.querySelector('.list-tags-result').innerHTML = '';
-    document.querySelectorAll('.list-brand__checkbox').forEach(el => {
-        el.classList.remove('__active');
-    });
+    // document.querySelectorAll('.list-brand__checkbox').forEach(el => {
+    //     el.classList.remove('__active');
+    // });
     filterProducts();
 });
 
@@ -164,7 +164,7 @@ function addTag(filterType, filterValue) {
             </svg>
         </span>
     `;
-    tagElement.querySelector('.icon-reset').addEventListener('click', () => {
+    tagElement.querySelector('.list-tags-result__actions').addEventListener('click', () => {
         selectedFilters[filterType].delete(filterValue);
         removeTag(filterType, filterValue);
         filterProducts();
@@ -182,9 +182,9 @@ function removeTag(filterType, filterValue) {
             tagsContainer.removeChild(tag);
         }
     });
-    document.querySelectorAll('.list-brand__checkbox').forEach(el => {
-        if (!selectedFilters[el.dataset.filterType].has(el.name)) el.classList.remove('__active');
-    });
+    // document.querySelectorAll('.list-brand__checkbox').forEach(el => {
+    //     if (!selectedFilters[el.dataset.filterType].has(el.name)) el.classList.remove('__active');
+    // });
 }
 
 function filterProducts() {
@@ -223,10 +223,15 @@ function filterProducts() {
 }
 
 
-document.querySelectorAll('.category-filter__head').forEach(head => {
-    head.addEventListener('click', () => {
-        const body = head.nextElementSibling;
-        head.classList.toggle('__open');
+const head = document.querySelectorAll('.category-filter__head')
+const ic = document.querySelectorAll('.category-filter__change .icon')
+for (let i = 0; i < head.length; i++) {
+    head[i].addEventListener('click', () => {
+        const body = head[i].nextElementSibling;
+        head[i].classList.toggle('__open');
         body.classList.toggle('__open');
+        ic[i].classList.toggle('icon_actives')
     });
-});
+    
+}
+
