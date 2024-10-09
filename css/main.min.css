@@ -2029,7 +2029,7 @@ input.__error {
   }
 
   .header-info__item {
-    width: 30% !important;
+    width: unset !important;
   }
 
   .header-info__choise-shop {
@@ -2038,8 +2038,10 @@ input.__error {
   .menu-mobile__city .header-info {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
-    justify-content: flex-start;
-    gap: 0 22%;
+    justify-content: space-around;
+    gap: 10px;
+    /* justify-content: flex-start; */
+    /* gap: 0 22%; */
   }
   .menu-mobile__city .header-info__city {
     font-size: 13px;
