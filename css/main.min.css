@@ -471,6 +471,9 @@ textarea::-webkit-input-placeholder {
   color: #898a8c;
   font-size: 15px;
 }
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
 
 .__error::placeholder {
   color: #f00;
