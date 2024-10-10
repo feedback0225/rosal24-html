@@ -678,7 +678,7 @@ function activateSubMenu(valueDataId) {
   });
 
   if (targetBox) {
-    if (targetBox.classList.contains("wrapper-sub-menu__box--active")) {
+    if (targetBox.classList.contains("wrapper-sub-menu__box--active") && window.innerWidth <= 1279) {
       deactivateSubMenu(); // If already active, close it
     } else {
       targetBox.classList.add("wrapper-sub-menu__box--active"); // Otherwise, activate it
@@ -689,14 +689,19 @@ function activateSubMenu(valueDataId) {
 // Добавляем события для элементов списка
 listNavCategoryItems.forEach(function (item) {
   let valueDataId = item.dataset.targetId;
+  var wrapperMenu = document.querySelector(".wrapper-sub-menu");  
   
   item.addEventListener("click", function () {
-    activateSubMenu(valueDataId);
+    if (valueDataId === valueDataId && wrapperMenu.classList.contains("wrapper-sub-menu--active")) {
+      deactivateSubMenu(valueDataId);
+    } else {
+      activateSubMenu(valueDataId);
+    }
   });
 
   if (window.innerWidth >= 1279) {
     item.addEventListener("mouseenter", function () {
-      activateSubMenu(valueDataId);
+        activateSubMenu(valueDataId);
     });
   }
 });
