@@ -5932,6 +5932,15 @@ input.__error {
   font-family: "Museo Cyrl 500";
   font-size: 16px;
 }
+.list-basket-calc-order {
+  gap: unset !important;
+}
+.list-basket-calc-order .icon-minus {
+  width: 12px;
+}
+.list-basket-calc-order .icon-plus {
+  width: 12px;
+}
 @media only screen and (max-width: 575px) {
   .list-basket {
     gap: 33px 0;
