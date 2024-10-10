@@ -8514,7 +8514,7 @@ input.__error {
   }
 }
 .tooltip {
-  display: grid;
+  display: none;
   grid-template-rows: 0fr;
   overflow: hidden;
   margin: 0 -25px -30px 0;
@@ -8556,6 +8556,11 @@ input.__error {
 .basket-order-bonus__info:hover .basket-order-bonus__tooltip-wrapper {
   top: 0;
 }
+
+.bonus-cashback:hover .tooltip, .basket-order-bonus__info:hover .tooltip {
+  display: block;
+}
+
 .bonus-cashback:hover .basket-order-bonus__tooltip-wrapper {
   top: 0px;
 }
