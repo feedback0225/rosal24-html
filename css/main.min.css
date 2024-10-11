@@ -2034,7 +2034,7 @@ input.__error {
   }
 
   .header-info__choise-shop {
-    /* width: 113px; */
+    min-width: 113px;
   }
   .menu-mobile__city .header-info {
     -webkit-box-pack: start;
@@ -3772,7 +3772,7 @@ input.__error {
     border-right: none;
   }
   .list-product__frame {
-    /* height: 150px; */
+    height: 150px;
   }
   .list-product__frame img {
     max-height: 100%;
