@@ -1715,7 +1715,8 @@ input.__error {
 }
 .header-info__choise-shop {
   display: block;
-  width: 128px;
+  width: min-content;
+  min-width: 100px;
   font-family: "Geologica Regular";
   font-size: 15px;
   color: #2884e0;
@@ -2033,7 +2034,7 @@ input.__error {
   }
 
   .header-info__choise-shop {
-    width: 113px;
+    /* width: 113px; */
   }
   .menu-mobile__city .header-info {
     -webkit-box-pack: start;
