@@ -639,20 +639,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const cardTabContent = document.querySelectorAll('.main--card .card-tabs-nav__item')
   const cardTabSelect = document.querySelector('.main--card .basket-delivery__link')
 
-
-
-  document.addEventListener('DOMContentLoaded', function() {
     if(cardTab){
       cardTabSelect.addEventListener('click', () => {
         cardTab.forEach((item, i) => {
           item.classList.remove('card-tabs-content__box--active')
           cardTabContent[i].classList.remove('card-tabs-nav__item--active')
+          console.log(cardTabContent[i].classList.remove('card-tabs-nav__item--active'))
         })
         cardTab[3].classList.add('card-tabs-content__box--active')
         cardTabContent[3].classList.add('card-tabs-nav__item--active')
+        console.log(cardTabContent[3].classList.add('card-tabs-nav__item--active'))
       })
     }
-  })
 
 
 });
