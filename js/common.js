@@ -552,6 +552,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // basket panel
+  window.basket = function (){
   (_document44 = document) === null || _document44 === void 0 || (_document44 = _document44.querySelector(".js-basket-actions")) === null || _document44 === void 0 || _document44.addEventListener("click", function (e) {
     var _document45;
     e.preventDefault();
@@ -569,6 +570,8 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".wrapper-panel-basket").classList.remove("wrapper-panel-basket--active");
     document.querySelector("body").classList.remove("body-fixed");
   });
+};
+window.basket();
 
   // calc
   (_document47 = document) === null || _document47 === void 0 || _document47.querySelectorAll(".js-calc-minus").forEach(function (item) {
