@@ -5403,6 +5403,9 @@ input.__error {
 .wrapper-panel-shops--active {
   left: 0;
 }
+.wrapper-panel-shops .box-shops__list  {
+  height: 100vh;
+}
 .panel-shops {
   display: -webkit-box;
   display: -ms-flexbox;
