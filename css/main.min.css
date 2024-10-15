@@ -5403,9 +5403,9 @@ input.__error {
 .wrapper-panel-shops--active {
   left: 0;
 }
-.wrapper-panel-shops .box-shops__list  {
-  height: 100vh;
-}
+/* .wrapper-panel-shops .box-shops__list  {
+  height: calc(100vh - 80px);
+} */
 .panel-shops {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5474,6 +5474,15 @@ input.__error {
 }
 .box-shops {
   background-color: #fff;
+}
+.wrapper-panel-shops .box-shops {
+  height: calc(100vh - 81px);
+}
+
+@media only screen and (max-width: 1279px) {
+  .wrapper-panel-shops .box-shops {
+    height: calc(100vh - 65px);
+  }
 }
 .box-shops__head {
   display: -webkit-box;
