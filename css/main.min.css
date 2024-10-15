@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Geologica Light";
   src: url(../fonts/Geologica-Light.woff2) format("woff2"),
-    url(../fonts/Geologica-Light.woff) format("woff");
+  url(../fonts/Geologica-Light.woff) format("woff");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "Geologica Regular";
   src: url(../fonts/Geologica-Regular.woff2) format("woff2"),
-    url(../fonts/Geologica-Regular.woff) format("woff");
+  url(../fonts/Geologica-Regular.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Museo Cyrl 500";
   src: url(../fonts/MuseoCyrl-500.woff2) format("woff2"),
-    url(../fonts/MuseoCyrl-500.woff) format("woff");
+  url(../fonts/MuseoCyrl-500.woff) format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "Inter Bold";
   src: url(../fonts/Inter-Bold.woff2) format("woff2"),
-    url(../fonts/Inter-Bold.woff) format("woff");
+  url(../fonts/Inter-Bold.woff) format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -33,7 +33,7 @@
 @font-face {
   font-family: "Inter SemiBold";
   src: url(../fonts/Inter-SemiBold.woff2) format("woff2"),
-    url(../fonts/Inter-SemiBold.woff) format("woff");
+  url(../fonts/Inter-SemiBold.woff) format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -41,7 +41,7 @@
 @font-face {
   font-family: "Geologica Medium";
   src: url(../fonts/Geologica-Medium.woff2) format("woff2"),
-    url(../fonts/Geologica-Medium.woff) format("woff");
+  url(../fonts/Geologica-Medium.woff) format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -1716,13 +1716,16 @@ input.__error {
 .header-info__choise-shop {
   display: block;
   width: min-content;
-  min-width: 100px;
+  width: 128px;
   font-family: "Geologica Regular";
   font-size: 15px;
   color: #2884e0;
   text-decoration: none;
   border-bottom: 2px dotted #2884e0;
   line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .header-info__choise-shop:hover {
   border-color: transparent;
@@ -2034,7 +2037,7 @@ input.__error {
   }
 
   .header-info__choise-shop {
-    min-width: 113px;
+    width: 113px;
   }
   .menu-mobile__city .header-info {
     -webkit-box-pack: start;
@@ -3251,7 +3254,7 @@ input.__error {
     font-size: 13px;
     line-height: 1.5;
     letter-spacing: 0.7px;
-}
+  }
   .home-slider__actions {
     padding: 0 16% 0 0;
   }
@@ -4416,9 +4419,9 @@ input.__error {
   background-color: #fff;
 }
 .wrapper__nav
-  .list-nav-category--active
-  .list-nav-category__item:hover
-  .list-nav-category__sub {
+.list-nav-category--active
+.list-nav-category__item:hover
+.list-nav-category__sub {
   width: 100%;
   max-width: 81.7%;
 }
@@ -4431,9 +4434,9 @@ input.__error {
 }
 @media only screen and (max-width: 1599px) {
   .wrapper__nav
-    .list-nav-category--active
-    .list-nav-category__item:hover
-    .list-nav-category__sub {
+  .list-nav-category--active
+  .list-nav-category__item:hover
+  .list-nav-category__sub {
     width: 100%;
     max-width: 79.5%;
   }
@@ -4443,9 +4446,9 @@ input.__error {
 }
 @media only screen and (max-width: 1365px) {
   .wrapper__nav
-    .list-nav-category--active
-    .list-nav-category__item:hover
-    .list-nav-category__sub {
+  .list-nav-category--active
+  .list-nav-category__item:hover
+  .list-nav-category__sub {
     max-width: 79.5%;
   }
   .wrapper__nav .list-nav-category .list-nav-category__sub {
@@ -4600,8 +4603,8 @@ input.__error {
   transition: translate 0.2s 0.3s;
 }
 .wrapper-sub-menu__box--active
-  .sub-category__row--product-list
-  .sub-category__name {
+.sub-category__row--product-list
+.sub-category__name {
   translate: 0 0;
 }
 
@@ -5403,9 +5406,12 @@ input.__error {
 .wrapper-panel-shops--active {
   left: 0;
 }
-/* .wrapper-panel-shops .box-shops__list  {
-  height: calc(100vh - 80px);
-} */
+.wrapper-panel-shops .box-shops__list  {
+  box-sizing: border-box;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+}
 .panel-shops {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5437,6 +5443,11 @@ input.__error {
   overflow: hidden;
   overflow-y: auto;
   border-left: 1px solid #e8e9eb;
+}
+
+.wrapper-panel-shops .panel-shops__box {
+  overflow: unset;
+  overflow-y: unset;
 }
 @media only screen and (max-width: 1279px) {
   .panel-shops--page {
@@ -5477,6 +5488,7 @@ input.__error {
 }
 .wrapper-panel-shops .box-shops {
   height: calc(100vh - 81px);
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 1279px) {
@@ -6680,8 +6692,8 @@ input.__error {
     transition: rotate 0.3s;
   }
   .footer__column--contact-menu
-    .footer__column-change--active
-    .footer__column-change {
+  .footer__column-change--active
+  .footer__column-change {
     rotate: 0deg;
   }
   .footer__column--contact-menu .icon-arrow-change {
@@ -7564,7 +7576,7 @@ input.__error {
 }
 .information-slider .swiper-slide {
   height: auto;
-  
+
 }
 @media only screen and (max-width: 575px) {
   .information-slider__name {
