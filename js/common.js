@@ -643,7 +643,7 @@ window.basket();
   const cardTabSelect = document.querySelector('.main--card .basket-delivery__link')
 
     if(cardTab){
-      cardTabSelect.addEventListener('click', () => {
+      cardTabSelect?.addEventListener('click', () => {
         cardTab.forEach((item, i) => {
           item.classList.remove('card-tabs-content__box--active')
           cardTabContent[i].classList.remove('card-tabs-nav__item--active')
