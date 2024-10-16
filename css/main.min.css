@@ -9008,7 +9008,7 @@ body{
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  gap: 0 4px;
+  gap: 10px 4px;
 }
 .list-order-product__item {
   position: relative;
@@ -9052,7 +9052,7 @@ body{
 }
 @media only screen and (max-width: 575px) {
   .list-order-product {
-    gap: 0 5%;
+    gap: 10px 5%;
   }
   .list-order-product__item {
     width: 50px;
