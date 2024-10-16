@@ -5840,7 +5840,7 @@ input.__error {
   -ms-flex-positive: 1;
   flex-grow: 1;
   height: calc(100% - 239px);
-  padding: 25px 10px 0px 40px;
+  padding: 25px 10px 25px 40px;
 }
 .panel-basket__bottom {
   display: -webkit-box;
@@ -5871,7 +5871,7 @@ input.__error {
     margin: 8px auto 0 5%;
   }
   .panel-basket__body {
-    padding: 15px 10px 0px 25px;
+    padding: 15px 10px 15px 25px;
   }
   .panel-basket__bottom {
     padding: 22px 23px 24px;
