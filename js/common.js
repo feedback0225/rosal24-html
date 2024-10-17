@@ -110,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  document.querySelectorAll(".js-form-date").forEach(function (e) {
+    var mailMask = IMask(e, {
+      mask: Date,
+    });
+  });
+
   // input file
   // (_document$querySelect = document.querySelector(".form__input-file")) === null || _document$querySelect === void 0 || _document$querySelect.addEventListener("change", function () {
   //   document.querySelector(".form__label-text").innerHTML = _this.value;

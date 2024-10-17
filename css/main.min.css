@@ -5963,9 +5963,18 @@ input.__error {
 }
 .list-basket-calc-order .icon-minus {
   width: 12px;
+  height: 12px;
 }
 .list-basket-calc-order .icon-plus {
   width: 12px;
+  height: 12px;
+}
+.list-basket-calc-order.list-basket-calc__item {
+  width: 12px;
+  height: 12px;
+}
+.list-basket-calc-order .list-basket-order__value {
+  color: #4a4b4e !important;
 }
 @media only screen and (max-width: 575px) {
   .list-basket {
