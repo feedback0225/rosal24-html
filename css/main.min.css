@@ -1758,6 +1758,7 @@ input.__error {
 .form-search--panel .form-search__input {
   height: 63px;
   background-color: transparent;
+  border-top: 1px solid #e8e9eb;
 }
 .form-search__input {
   width: 100%;
@@ -5407,6 +5408,12 @@ input.__error {
 .wrapper-panel-shops--active {
   left: 0;
 }
+.box-shops__list {
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
 .wrapper-panel-shops .box-shops__list  {
   box-sizing: border-box;
   height: 100%;
@@ -5442,7 +5449,7 @@ input.__error {
   width: 344px;
   height: 100%;
   overflow: hidden;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   border-left: 1px solid #e8e9eb;
 }
 
