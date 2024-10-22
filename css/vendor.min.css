@@ -629,7 +629,7 @@ body:not(.is-using-mouse) .fancybox__container :focus {
   align-items: center;
 }
 .black_blur_vis{
-  z-index: 6;
+  z-index: 21;
   opacity: 1;
   transition: all .3s;
 }

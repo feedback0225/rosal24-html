@@ -608,6 +608,12 @@ section {
     padding: 18px 10px 16px 10px;
   }
 }
+#age_false {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 150%;
+  color: #898A8C;
+}
 .section-header {
   font-family: "Museo Cyrl 500";
   font-size: 28px;
@@ -1379,6 +1385,7 @@ input.__error {
   padding: 0 1%;
   font-size: 13px;
   line-height: 1.5;
+  color: #898A8C;
 }
 .modal__code {
   margin-top: 30px;
