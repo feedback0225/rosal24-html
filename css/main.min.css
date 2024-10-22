@@ -9933,7 +9933,8 @@ body{
   gap: 0 4px;
 }
 .card-price {
-  margin-top: 34px;
+  /* margin-top: 34px; */
+  margin-top: 44px;
 }
 .card-price__box {
   display: -webkit-box;
