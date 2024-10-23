@@ -3501,10 +3501,10 @@ input.__error {
 }
 .list-product__remove {
   position: absolute;
-  right: 0;
+  right: -5px;
   cursor: pointer;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   transition: all 0.3s;
 }
 .list-product__remove:hover {
@@ -5652,9 +5652,9 @@ input.__error {
   border-radius: 0 0 4px 4px;
   cursor: pointer;
 }
-.list-shops__item--checked .list-shops__icon .icon {
-  stroke: #e51818;
-  fill: #e51818;
+.list-shops__item--checked .icon {
+  stroke: #e51818 !important;
+  fill: #e51818 !important;
 }
 .list-shops__item .list-shops__choose-btn {
   display: none;
