@@ -5554,6 +5554,7 @@ input.__error {
 }
 .box-shops__search {
   border-bottom: 1px solid #e8e9eb;
+  height: 63px;
 }
 .box-shops__nav-mobile {
   display: none;
@@ -10849,6 +10850,7 @@ body{
 }
 .gallery-big {
   width: calc(100% - 100px) !important;
+  height: 100%;
 }
 .gallery-big__item {
   height: 100% !important;
