@@ -299,6 +299,9 @@ template {
   filter: var(--carousel-button-svg-filter, none);
   pointer-events: none;
 }
+#modal-reviews svg {
+  stroke: white;
+}
 html.with-fancybox {
   scroll-behavior: auto;
 }
