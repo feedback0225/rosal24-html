@@ -413,6 +413,7 @@ a {
 img {
   max-width: 100%;
   vertical-align: top;
+  margin: auto;
 }
 input,
 select,
@@ -2756,6 +2757,7 @@ input.__error {
 .product-day__frame {
   height: 285px;
   position: relative;
+  display: flex;
 }
 .product-day__labels {
   position: absolute;
@@ -3501,10 +3503,10 @@ input.__error {
 }
 .list-product__remove {
   position: absolute;
-  right: -5px;
+  right: 0;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   transition: all 0.3s;
 }
 .list-product__remove:hover {
@@ -8321,6 +8323,7 @@ input.__error {
 .history-list-product__item {
   position: relative;
   width: 64px;
+  text-align: center;
 }
 .history-list-product__item img {
   height: 64px;
@@ -9056,11 +9059,14 @@ body{
 .list-order-product__item {
   position: relative;
   width: 67px;
+  display: flex;
+
 }
 .list-order-product__item img {
   height: 64px;
   -o-object-fit: cover;
   object-fit: cover;
+  margin: 0 auto;
 }
 .list-order-product__value {
   position: absolute;
