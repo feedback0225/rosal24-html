@@ -4184,6 +4184,7 @@ input.__error {
   }
   .news-list--page {
     gap: 52px 0;
+    padding: 0 24px;
   }
   .news-list--page .news-list__item {
     width: 100%;
