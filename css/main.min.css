@@ -4590,7 +4590,7 @@ input.__error {
 }
 .wrapper-sub-menu__box {
   position: absolute;
-  left: -100%;
+  right: 100%;
   width: 80%;
   max-width: 1036px;
   overflow-y: scroll;
