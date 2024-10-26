@@ -4590,7 +4590,7 @@ input.__error {
 }
 .wrapper-sub-menu__box {
   position: absolute;
-  right: 100%;
+  left: -100%;
   width: 80%;
   max-width: 1036px;
   overflow-y: scroll;
@@ -4604,9 +4604,22 @@ input.__error {
 .wrapper-sub-menu__box.wrapper-sub-menu__box--home {
   margin-left: 0;
 }
+
 .wrapper-sub-menu__box--active {
   left: 0;
+  /* opacity: 0; */
 }
+
+.wrapper-sub-menu--active .wrapper-sub-menu__box {
+  right: 100% !important;
+  left: auto;
+  /* background-color: #000000; */
+}
+
+.wrapper-sub-menu--active .wrapper-sub-menu__box.wrapper-sub-menu__box--active {
+  left: 0 !important;
+}
+
 .wrapper-sub-menu-bg_btn {
   position: absolute;
   top: 0;
