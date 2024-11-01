@@ -6062,7 +6062,7 @@ input.__error {
 }
 .list-basket-calc__item--disabled {
   opacity: 0.3;
-  cursor: no-drop;
+  cursor: default;
 }
 .list-basket-calc__item .icon {
   -webkit-transition: all 0.3s ease-in-out;
